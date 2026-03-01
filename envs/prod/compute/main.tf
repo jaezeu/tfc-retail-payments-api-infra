@@ -10,8 +10,8 @@ module "api" {
   layer         = local.layer
   env           = var.env
 
-  dynamodb_table_name = data.tfe_outputs.non_prod_storage.values.dynamodb_table_name
-  dynamodb_table_arn  = data.tfe_outputs.non_prod_storage.values.dynamodb_table_arn
+  dynamodb_table_name = data.tfe_outputs.prod_storage.values.dynamodb_table_name
+  dynamodb_table_arn  = data.tfe_outputs.prod_storage.values.dynamodb_table_arn
 
   tags = merge(var.tags, {
     business_unit = var.business_unit
