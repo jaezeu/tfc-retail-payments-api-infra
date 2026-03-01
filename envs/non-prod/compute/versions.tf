@@ -5,7 +5,7 @@ terraform {
     organization = "hcp-poc-jazeel"
 
     workspaces {
-      name = "retail-payments-api-storage-nonprod"
+      name = "retail-payments-api-compute-nonprod"
     }
   }
 
