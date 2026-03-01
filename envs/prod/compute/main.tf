@@ -15,8 +15,8 @@ module "api" {
 
   tags = merge(var.tags, {
     business_unit = var.business_unit
-    app          = var.app_name
-    env          = var.env
-    layer        = local.layer
+    app           = var.app_name
+    env           = var.env
+    layer         = local.layer
   })
 }
