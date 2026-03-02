@@ -8,6 +8,7 @@ module "ddb" {
   table_name  = "${local.name}-ddb"
   hash_key    = "pk"
   enable_pitr = false
+  billing_mode = "PROVISIONED"
 
   tags = merge(var.tags, {
     business_unit = var.business_unit
