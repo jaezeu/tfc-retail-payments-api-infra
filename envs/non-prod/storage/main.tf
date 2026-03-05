@@ -14,6 +14,6 @@ module "ddb" {
     app          = var.app_name
     env          = var.env
     layer        = local.layer
-    # cost_center   = "1111"
+    cost_center   = "1111"
   })
 }
