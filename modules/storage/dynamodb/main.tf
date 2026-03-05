@@ -1,7 +1,9 @@
 resource "aws_dynamodb_table" "this" {
   name         = var.table_name
-  billing_mode = "PAY_PER_REQUEST"
+  billing_mode = var.billing_mode
   hash_key     = var.hash_key
+  read_capacity  = var.billing_mode == "PROVISIONED" ? 20 : null
+  write_capacity = var.billing_mode == "PROVISIONED" ? 20 : null
 
   attribute {
     name = var.hash_key
